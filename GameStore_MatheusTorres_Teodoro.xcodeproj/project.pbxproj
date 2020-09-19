@@ -3,27 +3,37 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6380A38774FEBF5E823ADAFA /* Pods_GameStore_MatheusTorres_Teodoro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1914CAA7CD67F8754A3B4519 /* Pods_GameStore_MatheusTorres_Teodoro.framework */; };
 		FC08155025167887001D7D74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC08154F25167887001D7D74 /* AppDelegate.swift */; };
 		FC08155225167887001D7D74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC08155125167887001D7D74 /* SceneDelegate.swift */; };
-		FC08155425167887001D7D74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC08155325167887001D7D74 /* ViewController.swift */; };
+		FC08155425167887001D7D74 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC08155325167887001D7D74 /* MainViewController.swift */; };
 		FC08155725167887001D7D74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC08155525167887001D7D74 /* Main.storyboard */; };
 		FC08155925167888001D7D74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC08155825167888001D7D74 /* Assets.xcassets */; };
 		FC08155C25167888001D7D74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC08155A25167888001D7D74 /* LaunchScreen.storyboard */; };
+		FC4BF1EC25168445001BDA2C /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = FC4BF1E925168444001BDA2C /* loading.json */; };
+		FC4BF1ED25168445001BDA2C /* gameboyPulante.json in Resources */ = {isa = PBXBuildFile; fileRef = FC4BF1EA25168445001BDA2C /* gameboyPulante.json */; };
+		FC4BF1EE25168445001BDA2C /* gameStore.json in Resources */ = {isa = PBXBuildFile; fileRef = FC4BF1EB25168445001BDA2C /* gameStore.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0EEBA19F1BC917E89410277F /* Pods-GameStore_MatheusTorres_Teodoro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameStore_MatheusTorres_Teodoro.debug.xcconfig"; path = "Target Support Files/Pods-GameStore_MatheusTorres_Teodoro/Pods-GameStore_MatheusTorres_Teodoro.debug.xcconfig"; sourceTree = "<group>"; };
+		1914CAA7CD67F8754A3B4519 /* Pods_GameStore_MatheusTorres_Teodoro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameStore_MatheusTorres_Teodoro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		925D33030FA15A94E7036046 /* Pods-GameStore_MatheusTorres_Teodoro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameStore_MatheusTorres_Teodoro.release.xcconfig"; path = "Target Support Files/Pods-GameStore_MatheusTorres_Teodoro/Pods-GameStore_MatheusTorres_Teodoro.release.xcconfig"; sourceTree = "<group>"; };
 		FC08154C25167887001D7D74 /* GameStore_MatheusTorres_Teodoro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameStore_MatheusTorres_Teodoro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC08154F25167887001D7D74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC08155125167887001D7D74 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FC08155325167887001D7D74 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FC08155325167887001D7D74 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		FC08155625167887001D7D74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC08155825167888001D7D74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC08155B25167888001D7D74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC08155D25167888001D7D74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC4BF1E925168444001BDA2C /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
+		FC4BF1EA25168445001BDA2C /* gameboyPulante.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gameboyPulante.json; sourceTree = "<group>"; };
+		FC4BF1EB25168445001BDA2C /* gameStore.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gameStore.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +41,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6380A38774FEBF5E823ADAFA /* Pods_GameStore_MatheusTorres_Teodoro.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D5BD53AC73950EEFF3FCD06E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0EEBA19F1BC917E89410277F /* Pods-GameStore_MatheusTorres_Teodoro.debug.xcconfig */,
+				925D33030FA15A94E7036046 /* Pods-GameStore_MatheusTorres_Teodoro.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		ECB62D0D1CEB3EA391426F05 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1914CAA7CD67F8754A3B4519 /* Pods_GameStore_MatheusTorres_Teodoro.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FC08154325167887001D7D74 = {
 			isa = PBXGroup;
 			children = (
 				FC08154E25167887001D7D74 /* GameStore_MatheusTorres_Teodoro */,
 				FC08154D25167887001D7D74 /* Products */,
+				D5BD53AC73950EEFF3FCD06E /* Pods */,
+				ECB62D0D1CEB3EA391426F05 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +86,42 @@
 		FC08154E25167887001D7D74 /* GameStore_MatheusTorres_Teodoro */ = {
 			isa = PBXGroup;
 			children = (
-				FC08154F25167887001D7D74 /* AppDelegate.swift */,
-				FC08155125167887001D7D74 /* SceneDelegate.swift */,
-				FC08155325167887001D7D74 /* ViewController.swift */,
-				FC08155525167887001D7D74 /* Main.storyboard */,
+				FC08156B25168024001D7D74 /* Delegate */,
+				FC08156E2516807F001D7D74 /* LottieFiles */,
+				FC08156C25168049001D7D74 /* ViewControllers */,
 				FC08155825167888001D7D74 /* Assets.xcassets */,
+				FC08155525167887001D7D74 /* Main.storyboard */,
 				FC08155A25167888001D7D74 /* LaunchScreen.storyboard */,
 				FC08155D25167888001D7D74 /* Info.plist */,
 			);
 			path = GameStore_MatheusTorres_Teodoro;
+			sourceTree = "<group>";
+		};
+		FC08156B25168024001D7D74 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				FC08154F25167887001D7D74 /* AppDelegate.swift */,
+				FC08155125167887001D7D74 /* SceneDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		FC08156C25168049001D7D74 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FC08155325167887001D7D74 /* MainViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FC08156E2516807F001D7D74 /* LottieFiles */ = {
+			isa = PBXGroup;
+			children = (
+				FC4BF1EA25168445001BDA2C /* gameboyPulante.json */,
+				FC4BF1EB25168445001BDA2C /* gameStore.json */,
+				FC4BF1E925168444001BDA2C /* loading.json */,
+			);
+			path = LottieFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +131,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC08156025167888001D7D74 /* Build configuration list for PBXNativeTarget "GameStore_MatheusTorres_Teodoro" */;
 			buildPhases = (
+				DC01DF80A2CE104DA109FEA4 /* [CP] Check Pods Manifest.lock */,
 				FC08154825167887001D7D74 /* Sources */,
 				FC08154925167887001D7D74 /* Frameworks */,
 				FC08154A25167887001D7D74 /* Resources */,
+				04B0CE0A4BC8B382483E3517 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,18 +185,63 @@
 			files = (
 				FC08155C25167888001D7D74 /* LaunchScreen.storyboard in Resources */,
 				FC08155925167888001D7D74 /* Assets.xcassets in Resources */,
+				FC4BF1ED25168445001BDA2C /* gameboyPulante.json in Resources */,
+				FC4BF1EE25168445001BDA2C /* gameStore.json in Resources */,
+				FC4BF1EC25168445001BDA2C /* loading.json in Resources */,
 				FC08155725167887001D7D74 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		04B0CE0A4BC8B382483E3517 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GameStore_MatheusTorres_Teodoro/Pods-GameStore_MatheusTorres_Teodoro-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GameStore_MatheusTorres_Teodoro/Pods-GameStore_MatheusTorres_Teodoro-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GameStore_MatheusTorres_Teodoro/Pods-GameStore_MatheusTorres_Teodoro-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC01DF80A2CE104DA109FEA4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GameStore_MatheusTorres_Teodoro-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FC08154825167887001D7D74 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC08155425167887001D7D74 /* ViewController.swift in Sources */,
+				FC08155425167887001D7D74 /* MainViewController.swift in Sources */,
 				FC08155025167887001D7D74 /* AppDelegate.swift in Sources */,
 				FC08155225167887001D7D74 /* SceneDelegate.swift in Sources */,
 			);
@@ -216,7 +320,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -271,7 +375,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -283,12 +387,14 @@
 		};
 		FC08156125167888001D7D74 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EEBA19F1BC917E89410277F /* Pods-GameStore_MatheusTorres_Teodoro.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7Q7P4QSJ2J;
 				INFOPLIST_FILE = GameStore_MatheusTorres_Teodoro/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,18 +402,20 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.torrada.GameStore-MatheusTorres-Teodoro";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		FC08156225167888001D7D74 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 925D33030FA15A94E7036046 /* Pods-GameStore_MatheusTorres_Teodoro.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7Q7P4QSJ2J;
 				INFOPLIST_FILE = GameStore_MatheusTorres_Teodoro/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,7 +423,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.torrada.GameStore-MatheusTorres-Teodoro";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
