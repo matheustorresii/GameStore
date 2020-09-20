@@ -15,7 +15,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var actionButton: UIButton!
     
-    
     required init?(coder: NSCoder) {
         fatalError("Error")
     }

@@ -7,6 +7,7 @@
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,13 +22,13 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRg-3x-k5o">
                                 <rect key="frame" x="20" y="88" width="374" height="774"/>
                                 <color key="backgroundColor" name="neutralColor"/>
-                                <mutableString key="text">➤ Este aplicativo foi criado por Matheus Torres (29) utilizando uma api de jogos criada por Teodoro Rocha (43).
+                                <string key="text">➤ Este aplicativo foi criado por Matheus Torres (29) utilizando uma api de jogos criada por Teodoro Rocha (43).
 
 ➤ Requisições feitas com o URLSession, como por exemplo para o login/cadastro ou listagem de jogos.
 
 ➤ UserDefaults para salvar dados do usuário no app.
 
-➤ EXTRA: Tema dark compatível com o Dark Appearence do iOs 13 utilizando Color Set.</mutableString>
+➤ EXTRA: Tema dark compatível com o Dark Appearence do iOs 13 utilizando Color Set.</string>
                                 <color key="textColor" name="lightColor"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -49,7 +50,7 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="813.61607142857144"/>
         </scene>
-        <!--Game List View Controller-->
+        <!--Game List-->
         <scene sceneID="qAH-LU-MoZ">
             <objects>
                 <viewController storyboardIdentifier="GameListViewController" id="O2k-di-qtn" customClass="GameListViewController" customModule="GameStore_MatheusTorres_Teodoro" customModuleProvider="target" sceneMemberID="viewController">
@@ -57,29 +58,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TESTE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ubz-eD-HYw">
-                                <rect key="frame" x="182" y="437.5" width="50.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" name="lightColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uFd-iU-e7y">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" name="neutralColor"/>
+                                <color key="tintColor" name="lightColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0PW-EB-sfk">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="tg1-fR-otY">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="WDI-HR-QXW">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hfO-p1-lqa"/>
                         <color key="backgroundColor" name="neutralColor"/>
+                        <color key="tintColor" name="lightColor"/>
                         <constraints>
-                            <constraint firstItem="ubz-eD-HYw" firstAttribute="centerX" secondItem="t67-ct-lwl" secondAttribute="centerX" id="B8q-Ds-ZJc"/>
-                            <constraint firstItem="ubz-eD-HYw" firstAttribute="centerY" secondItem="t67-ct-lwl" secondAttribute="centerY" id="vZi-AH-GVB"/>
+                            <constraint firstItem="hfO-p1-lqa" firstAttribute="bottom" secondItem="uFd-iU-e7y" secondAttribute="bottom" id="DNy-Ha-LyQ"/>
+                            <constraint firstItem="uFd-iU-e7y" firstAttribute="leading" secondItem="hfO-p1-lqa" secondAttribute="leading" id="QLX-dr-UxT"/>
+                            <constraint firstItem="uFd-iU-e7y" firstAttribute="top" secondItem="hfO-p1-lqa" secondAttribute="top" id="dzv-kQ-jRj"/>
+                            <constraint firstItem="hfO-p1-lqa" firstAttribute="trailing" secondItem="uFd-iU-e7y" secondAttribute="trailing" id="lLk-Fi-k74"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Game List" id="NDo-Vo-swz">
+                        <barButtonItem key="leftBarButtonItem" image="person.fill" catalog="system" id="LFJ-iu-QEx">
+                            <color key="tintColor" name="neutralColor"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y8L-98-Xgo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1048" y="-653"/>
+            <point key="canvasLocation" x="1048" y="-654"/>
         </scene>
         <!--Stoned Tower-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="GameStore_MatheusTorres_Teodoro" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="BYZ-38-t0r" customClass="MainViewController" customModule="GameStore_MatheusTorres_Teodoro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -256,12 +280,36 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="88.392857142857139"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="N72-7A-rrz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rbe-sm-TgA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1EL-fF-liO">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="neutralColor"/>
+                        <color key="barTintColor" name="lightColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" name="neutralColor"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="O2k-di-qtn" kind="relationship" relationship="rootViewController" id="JTk-3C-YL9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="suZ-lK-37k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="-654"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="0LL-MZ-fIP"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="info.circle" catalog="system" width="128" height="121"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <namedColor name="darkColor">
             <color red="0.78431372549019607" green="0.33725490196078434" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

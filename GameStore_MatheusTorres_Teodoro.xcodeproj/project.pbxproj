@@ -92,9 +92,9 @@
 		FC08154E25167887001D7D74 /* GameStore_MatheusTorres_Teodoro */ = {
 			isa = PBXGroup;
 			children = (
-				FCC67F602516B6460019E61C /* Structs */,
 				FC08156B25168024001D7D74 /* Delegate */,
 				FC08156E2516807F001D7D74 /* LottieFiles */,
+				FCC67F602516B6460019E61C /* Structs */,
 				FC08156C25168049001D7D74 /* ViewControllers */,
 				FC08155525167887001D7D74 /* Main.storyboard */,
 				FC08155A25167888001D7D74 /* LaunchScreen.storyboard */,
