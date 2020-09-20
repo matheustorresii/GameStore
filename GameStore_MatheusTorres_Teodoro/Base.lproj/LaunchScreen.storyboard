@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,26 +17,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stoned Tower" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="NrX-gV-seC">
-                                <rect key="frame" x="0.0" y="393" width="414" height="111"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stoned Tower" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="NrX-gV-seC">
+                                <rect key="frame" x="20" y="392.5" width="374" height="111"/>
                                 <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="95"/>
-                                <color key="textColor" red="1" green="0.62745098040000002" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" name="lightColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="neutralColor"/>
+                        <color key="tintColor" name="lightColor"/>
                         <constraints>
                             <constraint firstItem="NrX-gV-seC" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="IrC-T3-aB9"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NrX-gV-seC" secondAttribute="trailing" id="Uzs-1g-rCI"/>
-                            <constraint firstItem="NrX-gV-seC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VWC-oi-2Es"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NrX-gV-seC" secondAttribute="trailing" constant="20" id="Kdb-L5-XIi"/>
                             <constraint firstItem="NrX-gV-seC" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="gRd-Qv-Lw3"/>
+                            <constraint firstItem="NrX-gV-seC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="zCm-LH-Uir"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="lightColor">
+            <color red="1" green="0.62745098039215685" blue="0.70980392156862748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="neutralColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

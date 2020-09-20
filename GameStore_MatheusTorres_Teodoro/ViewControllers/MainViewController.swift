@@ -10,22 +10,52 @@ import Lottie
 
 class MainViewController: UIViewController {
 
-    @IBOutlet weak var gameStoreAnimatedView: AnimationView!
+    @IBOutlet weak var gameStoreView: AnimationView!
     @IBOutlet weak var logInButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupAnimation()
-        setupButtonLayer()
+        setupLayout()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if let isLogged = UserDefaults.standard.value(forKey: "isLogged") as? Bool {
+            if isLogged {
+                print("USUARIO JA LOGADO")
+//                let gameListViewController = self.storyboard?.instantiateViewController(identifier: "GameListViewController") as! GameListViewController
+//                self.present(gameListViewController, animated: true, completion: nil)
+            }
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        prepareForSegue()
+    }
+    
+    @IBSegueAction func showLogInView(_ coder: NSCoder) -> LoginViewController? {
+        LoginViewController(coder: coder, login: true)
+    }
+    
+    @IBSegueAction func showSignUp(_ coder: NSCoder) -> LoginViewController? {
+        LoginViewController(coder: coder, login: false)
+    }
+    
+    func prepareForSegue() {
+        let backItem = UIBarButtonItem()
+        backItem.title = ""
+        navigationItem.backBarButtonItem = backItem
     }
     
     func setupAnimation() {
-        gameStoreAnimatedView.contentMode = .scaleAspectFill
-        gameStoreAnimatedView.play()
+        gameStoreView.contentMode = .scaleAspectFill
+        gameStoreView.animationSpeed = 0.6
+        gameStoreView.play()
     }
     
-    func setupButtonLayer() {
+    func setupLayout() {
         logInButton.layer.cornerRadius = 5
         logInButton.layer.shadowColor = CGColor(red: 0, green: 0, blue: 0, alpha: 0.25)
         logInButton.layer.shadowOffset = CGSize(width: 0, height: 1.5)

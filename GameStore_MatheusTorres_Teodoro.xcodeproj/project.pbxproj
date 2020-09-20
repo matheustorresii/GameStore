@@ -17,6 +17,9 @@
 		FC4BF1EC25168445001BDA2C /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = FC4BF1E925168444001BDA2C /* loading.json */; };
 		FC4BF1ED25168445001BDA2C /* gameboyPulante.json in Resources */ = {isa = PBXBuildFile; fileRef = FC4BF1EA25168445001BDA2C /* gameboyPulante.json */; };
 		FC4BF1EE25168445001BDA2C /* gameStore.json in Resources */ = {isa = PBXBuildFile; fileRef = FC4BF1EB25168445001BDA2C /* gameStore.json */; };
+		FC4BF1F225168E1D001BDA2C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4BF1F125168E1D001BDA2C /* LoginViewController.swift */; };
+		FCC67F622516B6690019E61C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC67F612516B6690019E61C /* User.swift */; };
+		FCC67F772516F9B50019E61C /* GameListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC67F762516F9B50019E61C /* GameListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		FC4BF1E925168444001BDA2C /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		FC4BF1EA25168445001BDA2C /* gameboyPulante.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gameboyPulante.json; sourceTree = "<group>"; };
 		FC4BF1EB25168445001BDA2C /* gameStore.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gameStore.json; sourceTree = "<group>"; };
+		FC4BF1F125168E1D001BDA2C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FCC67F612516B6690019E61C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FCC67F762516F9B50019E61C /* GameListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,12 +92,13 @@
 		FC08154E25167887001D7D74 /* GameStore_MatheusTorres_Teodoro */ = {
 			isa = PBXGroup;
 			children = (
+				FCC67F602516B6460019E61C /* Structs */,
 				FC08156B25168024001D7D74 /* Delegate */,
 				FC08156E2516807F001D7D74 /* LottieFiles */,
 				FC08156C25168049001D7D74 /* ViewControllers */,
-				FC08155825167888001D7D74 /* Assets.xcassets */,
 				FC08155525167887001D7D74 /* Main.storyboard */,
 				FC08155A25167888001D7D74 /* LaunchScreen.storyboard */,
+				FC08155825167888001D7D74 /* Assets.xcassets */,
 				FC08155D25167888001D7D74 /* Info.plist */,
 			);
 			path = GameStore_MatheusTorres_Teodoro;
@@ -110,6 +117,8 @@
 			isa = PBXGroup;
 			children = (
 				FC08155325167887001D7D74 /* MainViewController.swift */,
+				FCC67F762516F9B50019E61C /* GameListViewController.swift */,
+				FC4BF1F125168E1D001BDA2C /* LoginViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -122,6 +131,14 @@
 				FC4BF1E925168444001BDA2C /* loading.json */,
 			);
 			path = LottieFiles;
+			sourceTree = "<group>";
+		};
+		FCC67F602516B6460019E61C /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+				FCC67F612516B6690019E61C /* User.swift */,
+			);
+			path = Structs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,8 +258,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC4BF1F225168E1D001BDA2C /* LoginViewController.swift in Sources */,
 				FC08155425167887001D7D74 /* MainViewController.swift in Sources */,
 				FC08155025167887001D7D74 /* AppDelegate.swift in Sources */,
+				FCC67F622516B6690019E61C /* User.swift in Sources */,
+				FCC67F772516F9B50019E61C /* GameListViewController.swift in Sources */,
 				FC08155225167887001D7D74 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

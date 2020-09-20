@@ -4,11 +4,78 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--About-->
+        <scene sceneID="TYV-pB-PmM">
+            <objects>
+                <viewController id="wCq-g3-g2N" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yGF-X0-hn6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRg-3x-k5o">
+                                <rect key="frame" x="20" y="88" width="374" height="774"/>
+                                <color key="backgroundColor" name="neutralColor"/>
+                                <mutableString key="text">➤ Este aplicativo foi criado por Matheus Torres (29) utilizando uma api de jogos criada por Teodoro Rocha (43).
+
+➤ Requisições feitas com o URLSession, como por exemplo para o login/cadastro ou listagem de jogos.
+
+➤ UserDefaults para salvar dados do usuário no app.
+
+➤ EXTRA: Tema dark compatível com o Dark Appearence do iOs 13 utilizando Color Set.</mutableString>
+                                <color key="textColor" name="lightColor"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nWC-gN-nVd"/>
+                        <color key="backgroundColor" name="neutralColor"/>
+                        <color key="tintColor" name="lightColor"/>
+                        <constraints>
+                            <constraint firstItem="nWC-gN-nVd" firstAttribute="bottom" secondItem="pRg-3x-k5o" secondAttribute="bottom" id="Gt9-YD-0bl"/>
+                            <constraint firstItem="nWC-gN-nVd" firstAttribute="trailing" secondItem="pRg-3x-k5o" secondAttribute="trailing" constant="20" id="Q2o-b2-1eO"/>
+                            <constraint firstItem="pRg-3x-k5o" firstAttribute="top" secondItem="nWC-gN-nVd" secondAttribute="top" id="ckq-PC-E3H"/>
+                            <constraint firstItem="pRg-3x-k5o" firstAttribute="leading" secondItem="nWC-gN-nVd" secondAttribute="leading" constant="20" id="kWx-3P-0SF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="About" id="qVP-81-dzm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Auk-H8-emQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="813.61607142857144"/>
+        </scene>
+        <!--Game List View Controller-->
+        <scene sceneID="qAH-LU-MoZ">
+            <objects>
+                <viewController storyboardIdentifier="GameListViewController" id="O2k-di-qtn" customClass="GameListViewController" customModule="GameStore_MatheusTorres_Teodoro" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="t67-ct-lwl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TESTE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ubz-eD-HYw">
+                                <rect key="frame" x="182" y="437.5" width="50.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="lightColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hfO-p1-lqa"/>
+                        <color key="backgroundColor" name="neutralColor"/>
+                        <constraints>
+                            <constraint firstItem="ubz-eD-HYw" firstAttribute="centerX" secondItem="t67-ct-lwl" secondAttribute="centerX" id="B8q-Ds-ZJc"/>
+                            <constraint firstItem="ubz-eD-HYw" firstAttribute="centerY" secondItem="t67-ct-lwl" secondAttribute="centerY" id="vZi-AH-GVB"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y8L-98-Xgo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1048" y="-653"/>
+        </scene>
         <!--Stoned Tower-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -17,72 +84,76 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="82" translatesAutoresizingMaskIntoConstraints="NO" id="IrG-D4-tb7">
-                                <rect key="frame" x="0.0" y="135" width="414" height="626"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eMq-Sn-HKL">
+                                <rect key="frame" x="50" y="235" width="314" height="426"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JCq-yz-LhB" customClass="AnimationView" customModule="Lottie">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fWx-r0-Wrz" customClass="AnimationView" customModule="Lottie">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="314"/>
+                                        <color key="backgroundColor" name="neutralColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="JCq-yz-LhB" secondAttribute="height" multiplier="1:1" id="BCA-uB-Bkh"/>
+                                            <constraint firstAttribute="width" secondItem="fWx-r0-Wrz" secondAttribute="height" multiplier="1:1" id="rt3-Bi-Mtl"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="gameStore"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Tl7-K7-v9B">
-                                        <rect key="frame" x="50" y="496" width="314" height="130"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Tl7-K7-v9B">
+                                        <rect key="frame" x="0.0" y="314" width="314" height="112"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9jV-aA-N2Q">
-                                                <rect key="frame" x="0.0" y="0.0" width="314" height="50"/>
-                                                <color key="backgroundColor" red="1" green="0.62745098040000002" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="tez-iZ-Sc6"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Damascus" family="Damascus" pointSize="28"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="314" height="46"/>
+                                                <color key="backgroundColor" name="lightColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Log In">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleColor" name="neutralColor"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="8Mk-6g-KK2" kind="show" destinationCreationSelector="showLogInView:" id="0cN-Ef-9T0"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofA-sX-hOb">
-                                                <rect key="frame" x="0.0" y="80" width="314" height="50"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="T39-7K-jjj"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Damascus" family="Damascus" pointSize="28"/>
-                                                <color key="tintColor" red="1" green="0.62745098040000002" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <state key="normal" title="Sign Up">
-                                                    <color key="titleColor" red="1" green="0.62745098040000002" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                </state>
+                                                <rect key="frame" x="0.0" y="66" width="314" height="46"/>
+                                                <color key="backgroundColor" name="secondaryNeutralColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                <color key="tintColor" name="lightColor"/>
+                                                <state key="normal" title="Sign Up"/>
+                                                <connections>
+                                                    <segue destination="8Mk-6g-KK2" kind="show" destinationCreationSelector="showSignUp:" id="0LL-MZ-fIP"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="Tl7-K7-v9B" secondAttribute="trailing" constant="50" id="66e-mK-qCY"/>
-                                    <constraint firstItem="Tl7-K7-v9B" firstAttribute="top" secondItem="JCq-yz-LhB" secondAttribute="bottom" constant="-50" id="Iri-wx-xvL"/>
-                                    <constraint firstItem="JCq-yz-LhB" firstAttribute="top" secondItem="IrG-D4-tb7" secondAttribute="top" constant="-50" id="Sfw-E5-b0f"/>
-                                    <constraint firstAttribute="trailing" secondItem="JCq-yz-LhB" secondAttribute="trailing" constant="-50" id="T2s-MB-2m2"/>
-                                    <constraint firstItem="Tl7-K7-v9B" firstAttribute="leading" secondItem="IrG-D4-tb7" secondAttribute="leading" constant="50" id="gcI-LE-g16"/>
-                                    <constraint firstItem="JCq-yz-LhB" firstAttribute="leading" secondItem="IrG-D4-tb7" secondAttribute="leading" constant="-50" id="zGP-Hb-BpQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="fWx-r0-Wrz" secondAttribute="trailing" id="0Eg-Rc-xZA"/>
+                                    <constraint firstItem="Tl7-K7-v9B" firstAttribute="leading" secondItem="eMq-Sn-HKL" secondAttribute="leading" id="HuX-CX-hs4"/>
+                                    <constraint firstAttribute="trailing" secondItem="Tl7-K7-v9B" secondAttribute="trailing" id="gfS-Rn-jIy"/>
+                                    <constraint firstItem="fWx-r0-Wrz" firstAttribute="leading" secondItem="eMq-Sn-HKL" secondAttribute="leading" id="vN0-OS-GBg"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="neutralColor"/>
                         <color key="tintColor" red="1" green="0.62745098040000002" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="IrG-D4-tb7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Od1-vX-GUs"/>
-                            <constraint firstItem="IrG-D4-tb7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dgX-qr-ys7"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IrG-D4-tb7" secondAttribute="trailing" id="f9L-8M-yEK"/>
-                            <constraint firstItem="IrG-D4-tb7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ogB-F5-fhl"/>
+                            <constraint firstItem="eMq-Sn-HKL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Nkw-mx-mSY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eMq-Sn-HKL" secondAttribute="trailing" constant="50" id="PFl-pe-I6h"/>
+                            <constraint firstItem="eMq-Sn-HKL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z7g-u6-VLr"/>
+                            <constraint firstItem="eMq-Sn-HKL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tta-B6-EAw"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Stoned Tower" id="H5w-p7-jDI"/>
+                    <navigationItem key="navigationItem" title="Stoned Tower" largeTitleDisplayMode="always" id="H5w-p7-jDI">
+                        <barButtonItem key="rightBarButtonItem" style="done" id="qdA-fJ-gzt">
+                            <imageReference key="image" image="info.circle" catalog="system" symbolScale="large"/>
+                            <color key="tintColor" name="lightColor"/>
+                            <connections>
+                                <segue destination="wCq-g3-g2N" kind="show" id="oXC-mp-NoQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="gameStoreAnimatedView" destination="JCq-yz-LhB" id="fUA-3h-3uV"/>
+                        <outlet property="gameStoreView" destination="fWx-r0-Wrz" id="ULF-vQ-uft"/>
                         <outlet property="logInButton" destination="9jV-aA-N2Q" id="eK5-TP-Qlt"/>
                         <outlet property="signUpButton" destination="ofA-sX-hOb" id="xXT-S8-7lH"/>
                     </connections>
@@ -91,24 +162,69 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="88.392857142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="7ML-K7-AOa">
             <objects>
-                <viewController id="8Mk-6g-KK2" sceneMemberID="viewController">
+                <viewController id="8Mk-6g-KK2" customClass="LoginViewController" customModule="GameStore_MatheusTorres_Teodoro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qtc-vR-lZz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BUU-Ln-kEb">
-                                <rect key="frame" x="159" y="431" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="QKS-ib-HtJ">
+                                <rect key="frame" x="50" y="347.5" width="314" height="201"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="iEY-Zb-tN8">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="105"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BUU-Ln-kEb">
+                                                <rect key="frame" x="0.0" y="0.0" width="314" height="43"/>
+                                                <color key="backgroundColor" name="secondaryNeutralColor"/>
+                                                <color key="tintColor" name="darkColor"/>
+                                                <color key="textColor" name="darkColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                <textInputTraits key="textInputTraits" textContentType="username"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="fill" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cf1-Nw-cuL">
+                                                <rect key="frame" x="0.0" y="63" width="314" height="42"/>
+                                                <color key="backgroundColor" name="secondaryNeutralColor"/>
+                                                <color key="tintColor" name="darkColor"/>
+                                                <color key="textColor" name="darkColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wbf-Xj-51s">
+                                        <rect key="frame" x="0.0" y="155" width="314" height="46"/>
+                                        <color key="backgroundColor" name="lightColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Action">
+                                            <color key="titleColor" name="neutralColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="handleAction:" destination="8Mk-6g-KK2" eventType="touchUpInside" id="yDh-nr-y6o"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9ps-EF-R6X"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="neutralColor"/>
+                        <color key="tintColor" red="1" green="0.62745098040000002" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="QKS-ib-HtJ" firstAttribute="leading" secondItem="9ps-EF-R6X" secondAttribute="leading" constant="50" id="0qX-7s-nBE"/>
+                            <constraint firstItem="9ps-EF-R6X" firstAttribute="trailing" secondItem="QKS-ib-HtJ" secondAttribute="trailing" constant="50" id="36D-7u-gMA"/>
+                            <constraint firstItem="QKS-ib-HtJ" firstAttribute="centerY" secondItem="Qtc-vR-lZz" secondAttribute="centerY" id="Gwg-z8-jF3"/>
+                            <constraint firstItem="QKS-ib-HtJ" firstAttribute="centerX" secondItem="Qtc-vR-lZz" secondAttribute="centerX" id="eGm-F0-t7F"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Lji-UP-SeG"/>
+                    <connections>
+                        <outlet property="actionButton" destination="Wbf-Xj-51s" id="9ET-3O-Ic4"/>
+                        <outlet property="loginTextField" destination="BUU-Ln-kEb" id="FcM-NL-xKw"/>
+                        <outlet property="passwordTextField" destination="Cf1-Nw-cuL" id="EP7-iH-Xmu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xFj-zK-aoS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -122,13 +238,13 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hTX-9x-t6q">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="1" green="0.62745098040000002" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" name="lightColor"/>
+                        <color key="barTintColor" name="neutralColor"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="1" green="0.62745098040000002" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="textColor" name="lightColor"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" red="1" green="0.62745098040000002" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="textColor" name="lightColor"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -141,12 +257,22 @@
             <point key="canvasLocation" x="137.68115942028987" y="88.392857142857139"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="JCq-yz-LhB"/>
-    </designables>
+    <inferredMetricsTieBreakers>
+        <segue reference="0LL-MZ-fIP"/>
+    </inferredMetricsTieBreakers>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
+        <namedColor name="darkColor">
+            <color red="0.78431372549019607" green="0.33725490196078434" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="lightColor">
+            <color red="1" green="0.62745098039215685" blue="0.70980392156862748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="neutralColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="secondaryNeutralColor">
+            <color red="0.99607843137254903" green="0.99607843137254903" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
