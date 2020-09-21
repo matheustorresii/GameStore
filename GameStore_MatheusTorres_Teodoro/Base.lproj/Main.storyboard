@@ -15,13 +15,13 @@
         <!--About-->
         <scene sceneID="TYV-pB-PmM">
             <objects>
-                <viewController id="wCq-g3-g2N" sceneMemberID="viewController">
+                <viewController id="wCq-g3-g2N" customClass="InfoViewController" customModule="GameStore_MatheusTorres_Teodoro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yGF-X0-hn6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRg-3x-k5o">
-                                <rect key="frame" x="20" y="88" width="374" height="774"/>
+                                <rect key="frame" x="30" y="93" width="354" height="542"/>
                                 <color key="backgroundColor" name="neutralColor"/>
                                 <string key="text">➤ Este aplicativo foi criado por Matheus Torres (29) utilizando uma api de jogos criada por Teodoro Rocha (43).
 
@@ -34,18 +34,34 @@
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G7s-eN-SCu" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="187" y="635" width="207" height="207"/>
+                                <color key="backgroundColor" name="neutralColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="G7s-eN-SCu" secondAttribute="height" multiplier="1:1" id="rRx-kj-5Yf"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="gameboyPulante"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nWC-gN-nVd"/>
                         <color key="backgroundColor" name="neutralColor"/>
                         <color key="tintColor" name="lightColor"/>
                         <constraints>
-                            <constraint firstItem="nWC-gN-nVd" firstAttribute="bottom" secondItem="pRg-3x-k5o" secondAttribute="bottom" id="Gt9-YD-0bl"/>
-                            <constraint firstItem="nWC-gN-nVd" firstAttribute="trailing" secondItem="pRg-3x-k5o" secondAttribute="trailing" constant="20" id="Q2o-b2-1eO"/>
-                            <constraint firstItem="pRg-3x-k5o" firstAttribute="top" secondItem="nWC-gN-nVd" secondAttribute="top" id="ckq-PC-E3H"/>
-                            <constraint firstItem="pRg-3x-k5o" firstAttribute="leading" secondItem="nWC-gN-nVd" secondAttribute="leading" constant="20" id="kWx-3P-0SF"/>
+                            <constraint firstItem="nWC-gN-nVd" firstAttribute="trailing" secondItem="pRg-3x-k5o" secondAttribute="trailing" constant="30" id="3Wv-a6-8dk"/>
+                            <constraint firstItem="nWC-gN-nVd" firstAttribute="bottom" secondItem="G7s-eN-SCu" secondAttribute="bottom" constant="20" id="QuC-Q6-KTY"/>
+                            <constraint firstItem="nWC-gN-nVd" firstAttribute="trailing" secondItem="G7s-eN-SCu" secondAttribute="trailing" constant="20" id="TuY-AT-y0O"/>
+                            <constraint firstItem="pRg-3x-k5o" firstAttribute="top" secondItem="nWC-gN-nVd" secondAttribute="top" constant="5" id="fAW-Kv-6Qc"/>
+                            <constraint firstItem="pRg-3x-k5o" firstAttribute="leading" secondItem="nWC-gN-nVd" secondAttribute="leading" constant="30" id="gYX-o9-fvt"/>
+                            <constraint firstItem="G7s-eN-SCu" firstAttribute="width" secondItem="yGF-X0-hn6" secondAttribute="width" multiplier="0.5" id="nwm-6I-Gfx"/>
+                            <constraint firstItem="G7s-eN-SCu" firstAttribute="top" secondItem="pRg-3x-k5o" secondAttribute="bottom" id="zyH-JN-rH3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="About" id="qVP-81-dzm"/>
+                    <connections>
+                        <outlet property="gameboyPulanteAnimationView" destination="G7s-eN-SCu" id="zQ0-iN-CHs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Auk-H8-emQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -91,6 +107,7 @@
                                         <size key="customSize" width="160" height="219"/>
                                         <connections>
                                             <outlet property="coverImage" destination="3S3-j0-utF" id="SyY-QM-Owv"/>
+                                            <segue destination="bhI-DX-iXX" kind="presentation" destinationCreationSelector="showGameDetail:" id="M2q-Gv-agB"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -134,16 +151,87 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="-654.24107142857144"/>
         </scene>
-        <!--View Controller-->
+        <!--Game Detail View Controller-->
         <scene sceneID="z7P-zz-C62">
             <objects>
-                <viewController id="bhI-DX-iXX" sceneMemberID="viewController">
+                <viewController id="bhI-DX-iXX" customClass="GameDetailViewController" customModule="GameStore_MatheusTorres_Teodoro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="09q-ed-yhZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nintendo Switch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="gsa-4c-cQ6">
+                                <rect key="frame" x="30" y="10" width="354" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zelda Breath of the Wild" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="Dit-b1-9Yg">
+                                <rect key="frame" x="30" y="34" width="354" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <color key="textColor" name="lightColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zelda" translatesAutoresizingMaskIntoConstraints="NO" id="AGm-tl-SCA">
+                                <rect key="frame" x="30" y="86" width="354" height="354"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="AGm-tl-SCA" secondAttribute="height" multiplier="1:1" id="fmF-5s-XaX"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="KXB-NZ-cRh">
+                                <rect key="frame" x="30" y="440" width="354" height="36"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="WPY-vA-TPY">
+                                        <rect key="frame" x="0.0" y="0.0" width="57" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <color key="textColor" name="revertedNeutralColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="gne-7Y-8Al">
+                                        <rect key="frame" x="57" y="0.0" width="297" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" name="lightColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oBb-gJ-FHz">
+                                <rect key="frame" x="30" y="476" width="354" height="332"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">No kingdom. No memories. After a 100-year slumber, Link wakes up alone in a world he no longer remembers. Now the legendary hero must explore a vast and dangerous land and regain his memories before Hyrule is lost forever. Armed only with what he can scavenge, Link sets out to find answers and the resources needed to survive.</string>
+                                <color key="textColor" name="revertedNeutralColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vEx-Ak-SUz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vEx-Ak-SUz" firstAttribute="trailing" secondItem="Dit-b1-9Yg" secondAttribute="trailing" constant="30" id="0q9-Js-h72"/>
+                            <constraint firstItem="vEx-Ak-SUz" firstAttribute="trailing" secondItem="oBb-gJ-FHz" secondAttribute="trailing" constant="30" id="1F1-4f-pGl"/>
+                            <constraint firstItem="Dit-b1-9Yg" firstAttribute="leading" secondItem="vEx-Ak-SUz" secondAttribute="leading" constant="30" id="1LU-Oi-OFm"/>
+                            <constraint firstItem="Dit-b1-9Yg" firstAttribute="top" secondItem="gsa-4c-cQ6" secondAttribute="bottom" id="5lE-ke-Bxm"/>
+                            <constraint firstItem="AGm-tl-SCA" firstAttribute="top" secondItem="Dit-b1-9Yg" secondAttribute="bottom" constant="10" id="6Ei-Db-41d"/>
+                            <constraint firstItem="vEx-Ak-SUz" firstAttribute="trailing" secondItem="gsa-4c-cQ6" secondAttribute="trailing" constant="30" id="CwU-Cw-gxv"/>
+                            <constraint firstItem="oBb-gJ-FHz" firstAttribute="top" secondItem="KXB-NZ-cRh" secondAttribute="bottom" id="PbR-fH-1ap"/>
+                            <constraint firstItem="gsa-4c-cQ6" firstAttribute="leading" secondItem="vEx-Ak-SUz" secondAttribute="leading" constant="30" id="RXe-zG-O8Z"/>
+                            <constraint firstItem="vEx-Ak-SUz" firstAttribute="trailing" secondItem="KXB-NZ-cRh" secondAttribute="trailing" constant="30" id="ajB-Vl-l4U"/>
+                            <constraint firstItem="AGm-tl-SCA" firstAttribute="leading" secondItem="vEx-Ak-SUz" secondAttribute="leading" constant="30" id="dEy-8S-S5M"/>
+                            <constraint firstItem="KXB-NZ-cRh" firstAttribute="top" secondItem="AGm-tl-SCA" secondAttribute="bottom" id="dsE-He-dhj"/>
+                            <constraint firstItem="vEx-Ak-SUz" firstAttribute="bottom" secondItem="oBb-gJ-FHz" secondAttribute="bottom" id="ec9-sv-Spw"/>
+                            <constraint firstItem="AGm-tl-SCA" firstAttribute="centerX" secondItem="09q-ed-yhZ" secondAttribute="centerX" id="enG-C8-uKN"/>
+                            <constraint firstItem="oBb-gJ-FHz" firstAttribute="leading" secondItem="vEx-Ak-SUz" secondAttribute="leading" constant="30" id="m81-tQ-kfl"/>
+                            <constraint firstItem="KXB-NZ-cRh" firstAttribute="leading" secondItem="vEx-Ak-SUz" secondAttribute="leading" constant="30" id="pR1-tE-Yn4"/>
+                            <constraint firstItem="gsa-4c-cQ6" firstAttribute="top" secondItem="vEx-Ak-SUz" secondAttribute="top" constant="10" id="qXq-ZR-pLN"/>
+                            <constraint firstItem="vEx-Ak-SUz" firstAttribute="trailing" secondItem="AGm-tl-SCA" secondAttribute="trailing" constant="30" id="xXv-Rp-oGG"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="coverImage" destination="AGm-tl-SCA" id="oaa-bU-W0L"/>
+                        <outlet property="platformLabel" destination="gsa-4c-cQ6" id="hvV-ZE-yCL"/>
+                        <outlet property="plotTextView" destination="oBb-gJ-FHz" id="vkH-GY-Ejl"/>
+                        <outlet property="priceLabel" destination="gne-7Y-8Al" id="wBG-3a-Dop"/>
+                        <outlet property="titleLabel" destination="Dit-b1-9Yg" id="ISt-S6-uAk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1ry-K9-afb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -208,7 +296,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="neutralColor"/>
-                        <color key="tintColor" red="1" green="0.62745098040000002" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" name="lightColor"/>
                         <constraints>
                             <constraint firstItem="eMq-Sn-HKL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Nkw-mx-mSY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eMq-Sn-HKL" secondAttribute="trailing" constant="50" id="PFl-pe-I6h"/>
@@ -284,7 +372,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9ps-EF-R6X"/>
                         <color key="backgroundColor" name="neutralColor"/>
-                        <color key="tintColor" red="1" green="0.62745098040000002" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" name="lightColor"/>
                         <constraints>
                             <constraint firstItem="QKS-ib-HtJ" firstAttribute="leading" secondItem="9ps-EF-R6X" secondAttribute="leading" constant="50" id="0qX-7s-nBE"/>
                             <constraint firstItem="9ps-EF-R6X" firstAttribute="trailing" secondItem="QKS-ib-HtJ" secondAttribute="trailing" constant="50" id="36D-7u-gMA"/>
@@ -356,9 +444,11 @@
     <inferredMetricsTieBreakers>
         <segue reference="0cN-Ef-9T0"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" name="lightColor"/>
     <resources>
         <image name="info.circle" catalog="system" width="128" height="121"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="zelda" width="938" height="1530"/>
         <namedColor name="darkColor">
             <color red="0.78431372549019607" green="0.33725490196078434" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -368,11 +458,17 @@
         <namedColor name="neutralColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="revertedNeutralColor">
+            <color red="0.070588235294117646" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="secondaryNeutralColor">
             <color red="0.99607843137254903" green="0.99607843137254903" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

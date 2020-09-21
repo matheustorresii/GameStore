@@ -32,6 +32,11 @@ class GameListViewController: UIViewController {
         setupAnimation()
     }
     
+    @IBSegueAction func showGameDetail(_ coder: NSCoder) -> GameDetailViewController? {
+        guard let indexPath = collectionView.indexPathsForSelectedItems else { fatalError("Nothing Selected!") }
+        let game = arrayOfGames[indexPath.first!.row]
+        return GameDetailViewController(coder: coder, game: game)
+    }
     func setupAnimation() {
         loadingAnimationView.contentMode = .scaleAspectFit
         loadingAnimationView.animationSpeed = 1
@@ -86,7 +91,7 @@ class GameListViewController: UIViewController {
         
         item.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 8)
         
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1/3))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(0.4))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
         
         let section = NSCollectionLayoutSection(group: group)

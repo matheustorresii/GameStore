@@ -23,6 +23,8 @@
 		FCC67F7C2517C81B0019E61C /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC67F7B2517C81B0019E61C /* GameCell.swift */; };
 		FCC67F812517DCBD0019E61C /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC67F802517DCBD0019E61C /* Section.swift */; };
 		FCC67F842517DD5C0019E61C /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC67F832517DD5C0019E61C /* Game.swift */; };
+		FCC67F9925182C9A0019E61C /* GameDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC67F9825182C9A0019E61C /* GameDetailViewController.swift */; };
+		FCC67F9C251848CA0019E61C /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC67F9B251848C90019E61C /* InfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		FCC67F7B2517C81B0019E61C /* GameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
 		FCC67F802517DCBD0019E61C /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		FCC67F832517DD5C0019E61C /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		FCC67F9825182C9A0019E61C /* GameDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailViewController.swift; sourceTree = "<group>"; };
+		FCC67F9B251848C90019E61C /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,7 +129,9 @@
 			isa = PBXGroup;
 			children = (
 				FC08155325167887001D7D74 /* MainViewController.swift */,
+				FCC67F9825182C9A0019E61C /* GameDetailViewController.swift */,
 				FCC67F762516F9B50019E61C /* GameListViewController.swift */,
+				FCC67F9B251848C90019E61C /* InfoViewController.swift */,
 				FC4BF1F125168E1D001BDA2C /* LoginViewController.swift */,
 			);
 			path = ViewControllers;
@@ -284,6 +290,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC4BF1F225168E1D001BDA2C /* LoginViewController.swift in Sources */,
+				FCC67F9C251848CA0019E61C /* InfoViewController.swift in Sources */,
+				FCC67F9925182C9A0019E61C /* GameDetailViewController.swift in Sources */,
 				FCC67F842517DD5C0019E61C /* Game.swift in Sources */,
 				FC08155425167887001D7D74 /* MainViewController.swift in Sources */,
 				FC08155025167887001D7D74 /* AppDelegate.swift in Sources */,

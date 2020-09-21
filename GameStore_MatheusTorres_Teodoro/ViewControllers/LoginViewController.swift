@@ -28,6 +28,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLayout()
+        self.navigationController?.navigationBar.tintColor = UIColor(named: "lightColor")
     }
     
     @IBAction func handleAction(_ sender: Any) {
@@ -76,14 +77,14 @@ class LoginViewController: UIViewController {
                 self.dismiss(animated: true) {
                     let _ = self.navigationController?.popToRootViewController(animated: true)
                 }
+                if self.login {
+                        let gameListViewController =  self.storyboard!.instantiateViewController(identifier: "GameListViewController")
+                        let gameListVCNavigator = UINavigationController(rootViewController: gameListViewController)
+                        gameListVCNavigator.navigationBar.titleTextAttributes = [.foregroundColor: UIColor(named: "neutralColor")!]
+                        UIApplication.shared.windows.first?.rootViewController = gameListVCNavigator
+                        UIApplication.shared.windows.first?.makeKeyAndVisible()
+                }
             }))
-            if login {
-                    let gameListViewController =  self.storyboard!.instantiateViewController(identifier: "GameListViewController")
-                    let gameListVCNavigator = UINavigationController(rootViewController: gameListViewController)
-                    gameListVCNavigator.navigationBar.titleTextAttributes = [.foregroundColor: UIColor(named: "neutralColor")!]
-                    UIApplication.shared.windows.first?.rootViewController = gameListVCNavigator
-                    UIApplication.shared.windows.first?.makeKeyAndVisible()
-            }
         } else {
             alert.addAction(UIAlertAction(title: "OK", style: .cancel))
         }
