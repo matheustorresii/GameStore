@@ -21,14 +21,6 @@ class MainViewController: UIViewController {
         setupLayout()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        if let isLogged = UserDefaults.standard.value(forKey: "isLogged") as? Bool {
-            if isLogged {
-                loadBaseController()
-            }
-        }
-    }
-    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         prepareForSegue()
@@ -64,20 +56,6 @@ class MainViewController: UIViewController {
         signUpButton.layer.shadowColor = CGColor(red: 0, green: 0, blue: 0, alpha: 0.25)
         signUpButton.layer.shadowOffset = CGSize(width: 0, height: 1.5)
         signUpButton.layer.shadowOpacity = 1.0
-    }
-    
-    func loadBaseController() {
-        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let window = self.window else { return }
-        window.makeKeyAndVisible()
-        if UserDefaults.standard.bool(forKey: "isLogged") == false {
-            let mainVC: MainViewController = storyboard.instantiateViewController(identifier: "MainViewController") as! MainViewController
-            self.window?.rootViewController = mainVC
-        } else {
-            let gameListVC: GameListViewController = storyboard.instantiateViewController(identifier: "GameListViewController") as! GameListViewController
-            self.window?.rootViewController = gameListVC
-        }
-        self.window?.makeKeyAndVisible()
     }
 }
 

@@ -7,6 +7,7 @@
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -63,42 +64,90 @@
                                 <color key="backgroundColor" name="neutralColor"/>
                                 <color key="tintColor" name="lightColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0PW-EB-sfk">
-                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="itemSize" width="160" height="219"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="tg1-fR-otY">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GameCell" id="huC-UX-9JP" customClass="GameCell" customModule="GameStore_MatheusTorres_Teodoro" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="219"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="WDI-HR-QXW">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="IS0-HP-Smg">
+                                            <rect key="frame" x="0.0" y="0.0" width="160" height="219"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3S3-j0-utF">
+                                                    <rect key="frame" x="0.0" y="0.0" width="160" height="219"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="3S3-j0-utF" secondAttribute="bottom" id="AiJ-9P-TpF"/>
+                                                <constraint firstItem="3S3-j0-utF" firstAttribute="leading" secondItem="IS0-HP-Smg" secondAttribute="leading" id="O7P-di-fym"/>
+                                                <constraint firstAttribute="trailing" secondItem="3S3-j0-utF" secondAttribute="trailing" id="ee4-ik-Ufm"/>
+                                                <constraint firstItem="3S3-j0-utF" firstAttribute="top" secondItem="IS0-HP-Smg" secondAttribute="top" id="oYj-qL-eQK"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
+                                        <size key="customSize" width="160" height="219"/>
+                                        <connections>
+                                            <outlet property="coverImage" destination="3S3-j0-utF" id="SyY-QM-Owv"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="izU-QE-0zn" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="loading"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hfO-p1-lqa"/>
                         <color key="backgroundColor" name="neutralColor"/>
                         <color key="tintColor" name="lightColor"/>
                         <constraints>
+                            <constraint firstItem="hfO-p1-lqa" firstAttribute="trailing" secondItem="izU-QE-0zn" secondAttribute="trailing" id="5ac-z9-lNw"/>
                             <constraint firstItem="hfO-p1-lqa" firstAttribute="bottom" secondItem="uFd-iU-e7y" secondAttribute="bottom" id="DNy-Ha-LyQ"/>
                             <constraint firstItem="uFd-iU-e7y" firstAttribute="leading" secondItem="hfO-p1-lqa" secondAttribute="leading" id="QLX-dr-UxT"/>
+                            <constraint firstAttribute="bottom" secondItem="izU-QE-0zn" secondAttribute="bottom" id="bJI-VY-xWI"/>
+                            <constraint firstItem="izU-QE-0zn" firstAttribute="top" secondItem="hfO-p1-lqa" secondAttribute="top" id="bbs-fn-X0F"/>
                             <constraint firstItem="uFd-iU-e7y" firstAttribute="top" secondItem="hfO-p1-lqa" secondAttribute="top" id="dzv-kQ-jRj"/>
+                            <constraint firstItem="izU-QE-0zn" firstAttribute="leading" secondItem="hfO-p1-lqa" secondAttribute="leading" id="lEM-js-sxC"/>
                             <constraint firstItem="hfO-p1-lqa" firstAttribute="trailing" secondItem="uFd-iU-e7y" secondAttribute="trailing" id="lLk-Fi-k74"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Game List" id="NDo-Vo-swz">
                         <barButtonItem key="leftBarButtonItem" image="person.fill" catalog="system" id="LFJ-iu-QEx">
                             <color key="tintColor" name="neutralColor"/>
+                            <connections>
+                                <action selector="clickedOnProfile:" destination="O2k-di-qtn" id="Lml-DT-K18"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="uFd-iU-e7y" id="xSV-Oj-Une"/>
+                        <outlet property="loadingAnimationView" destination="izU-QE-0zn" id="xAz-UI-x0I"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y8L-98-Xgo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1048" y="-654"/>
+            <point key="canvasLocation" x="1047.8260869565217" y="-654.24107142857144"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="z7P-zz-C62">
+            <objects>
+                <viewController id="bhI-DX-iXX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="09q-ed-yhZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="vEx-Ak-SUz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1ry-K9-afb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1993" y="-654"/>
         </scene>
         <!--Stoned Tower-->
         <scene sceneID="tne-QT-ifu">
@@ -305,7 +354,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="0LL-MZ-fIP"/>
+        <segue reference="0cN-Ef-9T0"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="info.circle" catalog="system" width="128" height="121"/>
@@ -322,5 +371,8 @@
         <namedColor name="secondaryNeutralColor">
             <color red="0.99607843137254903" green="0.99607843137254903" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

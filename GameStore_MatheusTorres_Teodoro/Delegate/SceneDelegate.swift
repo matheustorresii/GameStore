@@ -23,10 +23,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window.makeKeyAndVisible()
         if UserDefaults.standard.bool(forKey: "isLogged") == false {
             let mainVC: MainViewController = storyboard.instantiateViewController(identifier: "MainViewController") as! MainViewController
-            self.window?.rootViewController = mainVC
+            let mainVCNavigator = UINavigationController(rootViewController: mainVC)
+            mainVCNavigator.navigationBar.titleTextAttributes = [.foregroundColor: UIColor(named: "lightColor")!]
+            self.window?.rootViewController = mainVCNavigator
         } else {
             let gameListVC: GameListViewController = storyboard.instantiateViewController(identifier: "GameListViewController") as! GameListViewController
-            self.window?.rootViewController = gameListVC
+            let gameListVCNavigator = UINavigationController(rootViewController: gameListVC)
+            gameListVCNavigator.navigationBar.titleTextAttributes = [.foregroundColor: UIColor(named: "neutralColor")!]
+            self.window?.rootViewController = gameListVCNavigator
         }
         self.window?.makeKeyAndVisible()
     }

@@ -77,6 +77,13 @@ class LoginViewController: UIViewController {
                     let _ = self.navigationController?.popToRootViewController(animated: true)
                 }
             }))
+            if login {
+                    let gameListViewController =  self.storyboard!.instantiateViewController(identifier: "GameListViewController")
+                    let gameListVCNavigator = UINavigationController(rootViewController: gameListViewController)
+                    gameListVCNavigator.navigationBar.titleTextAttributes = [.foregroundColor: UIColor(named: "neutralColor")!]
+                    UIApplication.shared.windows.first?.rootViewController = gameListVCNavigator
+                    UIApplication.shared.windows.first?.makeKeyAndVisible()
+            }
         } else {
             alert.addAction(UIAlertAction(title: "OK", style: .cancel))
         }
